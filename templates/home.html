@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+{% include "partials/app_header.html" %}
+
+<!-- App Content -->
+<div class="py-5 px-0">
+
+    <!-- Wallet Card -->
+    <div class="wallet position-relative pt-3 px-3">
+        <div class="bg-white rounded p-3 shadow-sm position-relative">
+            <!-- Balance -->
+            <div class="d-flex align-items-center justify-content-between mb-3">
+                <div class="pe-2">
+                    <small class="text-success">Active</small>
+                    <h3 class="m-0 p-0">&#8358;1,203,562.50</h3>
+                    <small class="fs-11">7035705838</small>
+                </div>
+                <div class="p-0">
+                    <a href="#" class="d-flex align-items-center justify-content-center lh-base text-white rounded fs-1 py-4 px-3 bg-info">
+                        <ion-icon name="add-outline" role="img" class="md hydrated" aria-label="add outline"></ion-icon>
+                    </a>
+                </div>
+            </div>
+            <!-- * Balance -->
+            <!-- Wallet Footer -->
+            <div class="border-top d-flex justify-content-between align-items-start pt-3 px-0">
+                <div class="text-center">
+                    <a href="#" class="d-block text-decoration-none">
+                        <div class="d-inline-flex align-items-center justify-content-center rounded text-white mb-2 fs-2 px-3 py-2 bg-danger">
+                            <ion-icon name="swap-horizontal-outline"></ion-icon>
+                        </div>
+                        <strong class="d-block lh-sm text-black fs-11">Transfer</strong>
+                    </a>
+                </div>
+                <div class="text-center">
+                    <a href="#" class="d-block text-decoration-none">
+                        <div class="d-inline-flex align-items-center justify-content-center rounded text-white mb-2 fs-2 px-3 py-2 bg-primary">
+                            <ion-icon name="phone-portrait-outline"></ion-icon>
+                        </div>
+                        <strong class="d-block lh-sm text-black fs-11">Airtime</strong>
+                    </a>
+                </div>
+                <div class="text-center">
+                    <a href="#" class="d-block text-decoration-none">
+                        <div class="d-inline-flex align-items-center justify-content-center rounded text-white mb-2 fs-2 px-3 py-2 bg-success">
+                            <ion-icon name="wallet-outline"></ion-icon>
+                        </div>
+                        <strong class="d-block lh-sm text-black fs-11">Save</strong>
+                    </a>
+                </div>
+                <div class="text-center">
+                    <a href="#" class="d-block text-decoration-none">
+                        <div class="d-inline-flex align-items-center justify-content-center rounded text-white mb-2 fs-2 px-3 py-2 bg-warning">
+                            <ion-icon name="help-outline"></ion-icon>
+                        </div>
+                        <strong class="d-block lh-sm text-black fs-11">Request</strong>
+                    </a>
+                </div>
+
+            </div>
+            <!-- * Wallet Footer -->
+        </div>
+    </div>
+    <!-- Wallet Card -->
+
+    <!-- Transactions -->
+    <div class="my-4 px-3">
+        <div class="d-flex align-items-center justify-content-between mb-3">
+            <h6 class="m-0 lh-sm pe-2">Recent Transactions</h6>
+            <a href="{% url 'transactions' %}" class="text-decoration-none"><small>View All</small></a>
+        </div>
+        <div>
+            {% include "partials/_transaction_card.html" %}
+        </div>
+    </div>
+    <!-- * Transactions -->
+
+</div>
+<!-- * App Content -->
+
+{% endblock %}

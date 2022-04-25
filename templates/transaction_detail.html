@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block title %}Transactions{% endblock %}
+
+{% block content %}
+
+<!-- App Header -->
+<div class="d-flex justify-content-center align-items-center position-fixed start-0 end-0 border-0 bg-light text-primary border-bottom py-2 z-index-999">
+    <div class="d-flex top-0 position-absolute align-items-center start-0 ms-2">
+        <a href="javascript:history.go(-1)" class="text-primary d-flex align-items-center justify-content-center position-relative p-2 my-2">
+            <ion-icon class="fs-1" name="chevron-back-outline"></ion-icon>
+        </a>
+    </div>
+    <div class="fs-5 py-1 px-2 text-black">Transaction Detail</div>
+    <div class="top-0 d-flex align-items-center position-absolute end-0 me-2">
+        <a href="#" class="text-primary d-flex align-items-center justify-content-center position-relative p-2 my-2">
+            <ion-icon name="download-outline" class="fs-1"></ion-icon>
+        </a>
+    </div>
+</div>
+<!-- * App Header -->
+
+<!-- App Content -->
+<div class="py-5 px-0 min-vh-100 mb-5">
+
+    <!-- Transaction Detail -->
+    <div class="px-3 mt-2">
+        <div class="mt-4">
+            <div class="text-center">
+                <div class="rounded-circle d-inline-flex align-items-center justify-content-center fs-1 text-white p-3 bg-success">
+                    <ion-icon name="thumbs-up-outline"></ion-icon>
+                </div>
+            </div>
+            <h5 class="text-center mt-2 text-success">Transaction Successful</h5>
+        </div>
+
+        <ul class="bg-transparent border-top-0 border-bottom-0 bg-white d-block p-0 m-0 lh-sm mt-3">
+            <li class="ps-0 pe-0 d-flex align-items-center justify-content-between position-relative lh-base border-bottom py-2">
+                <strong>Date</strong>
+                <span>Sep 25, 2020 10:45 AM</span>
+            </li>
+            <li class="ps-0 pe-0 d-flex align-items-center justify-content-between position-relative lh-base border-bottom py-2">
+                <strong>Amount</strong>
+                <h5 class="m-0">&#8358;5,000.00</h5>
+            </li>
+            <li class="ps-0 pe-0 d-flex align-items-center justify-content-between position-relative lh-base border-bottom py-2">
+                <strong>To</strong>
+                <span>Mercy Chukwu</span>
+            </li>
+            <li class="ps-0 pe-0 d-flex align-items-center justify-content-between position-relative lh-base border-bottom py-2">
+                <strong>Bank Name</strong>
+                <span>First Bank</span>
+            </li>
+            <li class="ps-0 pe-0 d-flex align-items-center justify-content-between position-relative lh-base border-bottom py-2">
+                <strong>Account Number</strong>
+                <span>7035705838</span>
+            </li>
+            <li class="ps-0 pe-0 d-flex align-items-center justify-content-between position-relative lh-base border-bottom py-2">
+                <strong>Category</strong>
+                <span>Shopping</span>
+            </li>
+            <li class="ps-0 pe-0 d-flex align-items-center justify-content-between position-relative lh-base border-bottom py-2">
+                <strong>Transaction ID</strong>
+                <span>2G783HN902NM</span>
+            </li>
+            <li class="ps-0 pe-0 d-flex align-items-center justify-content-between position-relative lh-base border-bottom py-2">
+                <strong>Description</strong>
+                <span>For the weekend flex</span>
+            </li>
+        </ul>
+    </div>
+    <!-- * Transaction Detail -->
+
+</div>
+
+{% endblock %}

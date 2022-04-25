@@ -1,0 +1,26 @@
+.wallet:before {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    content: "";
+    display: block;
+    height: 140px;
+    background: #0d6efd;
+}
+
+.fs-9 {
+    font-size: 0.5625em;
+}
+
+.fs-11 {
+    font-size: 0.6875em;
+}
+
+.z-index-999 {
+    z-index: 999;
+}
+
+.logo {
+    max-height: 24px;
+}

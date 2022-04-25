@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %}Transactions{% endblock %}
+
+{% block content %}
+
+<!-- App Header -->
+<div class="d-flex justify-content-center align-items-center position-fixed start-0 end-0 border-0 bg-light text-primary border-bottom py-2 z-index-999">
+    <div class="d-flex top-0 position-absolute align-items-center start-0 ms-2">
+        <a href="javascript:history.go(-1)" class="text-primary d-flex align-items-center justify-content-center position-relative p-2 my-2">
+            <ion-icon class="fs-1" name="chevron-back-outline"></ion-icon>
+        </a>
+    </div>
+    <div class="fs-5 py-1 px-2 text-black">Transactions</div>
+    <div class="top-0 d-flex align-items-center position-absolute end-0 me-2">
+        <a href="#" class="text-primary d-flex align-items-center justify-content-center position-relative p-2 my-2">
+            <ion-icon name="funnel-outline" class="fs-1"></ion-icon>
+        </a>
+    </div>
+</div>
+<!-- * App Header -->
+
+<!-- App Content -->
+<div class="py-5 px-0">
+
+    <!-- Transactions -->
+    <div class="px-3 mt-2">
+        
+        <!-- Search Component -->
+        <form class="d-block w-100 my-3">
+            <div class="w-100 m-0 position-relative d-flex align-items-center justify-content-between">
+                <input type="text" class="form-control shadow-none rounded border ps-2" placeholder="Search...">
+            </div>
+        </form>
+        <!-- * Search Component -->
+
+        <h6 class="m-0 lh-sm pb-2">Today</h6>
+        <div class="mb-3">
+            {% include "partials/_transaction_card.html" %}
+        </div>
+
+        <h6 class="m-0 lh-sm pb-2">Yesterday</h6>
+        <div class="mb-3">
+            {% include "partials/_transaction_card.html" %}
+        </div>
+
+        <h6 class="m-0 lh-sm pb-2">20 Apr, 2021</h6>
+        <div class="mb-3">
+            {% include "partials/_transaction_card.html" %}
+        </div>
+    </div>
+    <!-- * Transactions -->
+    <div class="px-3 mb-3">
+        <a href="#" class="btn btn-primary btn-block btn-lg">Load More</a>
+    </div>
+
+</div>
+
+{% endblock %}
