@@ -4,6 +4,122 @@
 
 {% block content %}
 
-{% include "partials/app_header.html" %}
+<!-- App Header -->
+<div class="d-flex justify-content-center align-items-center position-fixed start-0 end-0 border-0 bg-light text-primary border-bottom py-2 z-index-999">
+    <div class="d-flex top-0 position-absolute align-items-center start-0 ms-2">
+        <a href="javascript:history.go(-1)" class="text-primary d-flex align-items-center justify-content-center position-relative p-2 my-2">
+            <ion-icon class="fs-1" name="chevron-back-outline"></ion-icon>
+        </a>
+    </div>
+    <div class="fs-5 py-1 px-2 text-black">More</div>
+    <div class="top-0 d-flex align-items-center position-absolute end-0 me-2">
+        <a href="{% url 'home' %}" class="text-primary d-flex align-items-center justify-content-center position-relative p-2 my-2">
+            <ion-icon name="exit-outline" class="fs-1"></ion-icon>
+        </a>
+    </div>
+</div>
+<!-- * App Header -->
+
+<!-- App Content -->
+<div class="py-5 px-0 mb-3">
+
+    <div class="mt-3 text-center">
+        <div class="position-relative d-inline-flex">
+           <img src="https://picsum.photos/id/1027/70/70" alt="avatar" class="rounded-circle w-100 h-auto border border-3 shadow-sm">
+        </div>
+        <div class="d-block text-muted">Mercy Uzo Chukwu</div>
+    </div>
+
+    <div class="px-3 py-2 mt-1 text-muted">My Account</div>
+    <div class="list-group px-3">
+        <a href="" class="list-group-item d-flex justify-content-between align-items-center">
+            Account information
+            <ion-icon name="chevron-forward-outline" class="text-secondary"></ion-icon>
+        </a>
+        <a href="" class="list-group-item d-flex justify-content-between align-items-center">
+            Account limit
+            <ion-icon name="chevron-forward-outline" class="text-secondary"></ion-icon>
+        </a>
+        <a href="" class="list-group-item d-flex justify-content-between align-items-center">
+            Download account statement
+            <ion-icon name="chevron-forward-outline" class="text-secondary"></ion-icon>
+        </a>
+        <a href="" class="list-group-item d-flex justify-content-between align-items-center">
+            Referrals
+            <ion-icon name="chevron-forward-outline" class="text-secondary"></ion-icon>
+        </a>
+    </div>
+
+    <div class="px-3 py-2 mt-1 text-muted">Settings</div>
+    <div class="list-group px-3">
+        <a href="" class="list-group-item d-flex justify-content-between align-items-center">
+            Update your KYC
+            <ion-icon name="chevron-forward-outline" class="text-secondary"></ion-icon>
+        </a>
+        <a href="" class="list-group-item d-flex justify-content-between align-items-center">
+            Change password
+            <ion-icon name="chevron-forward-outline" class="text-secondary"></ion-icon>
+        </a>
+        <a href="" class="list-group-item d-flex justify-content-between align-items-center">
+            Change transaction pin
+            <ion-icon name="chevron-forward-outline" class="text-secondary"></ion-icon>
+        </a>
+        <a href="" class="list-group-item d-flex justify-content-between align-items-center">
+            Change security question
+            <ion-icon name="chevron-forward-outline" class="text-secondary"></ion-icon>
+        </a>
+    </div>
+
+    <div class="px-3 py-2 mt-1 text-muted">Support</div>
+    <div class="list-group px-3">
+        <a href="" class="list-group-item d-flex justify-content-between align-items-center">
+            Help center
+            <ion-icon name="chevron-forward-outline" class="text-secondary"></ion-icon>
+        </a>
+        <a href="" class="list-group-item d-flex justify-content-between align-items-center">
+            Frequently asked questions
+            <ion-icon name="chevron-forward-outline" class="text-secondary"></ion-icon>
+        </a>
+        <a href="" class="list-group-item d-flex justify-content-between align-items-center">
+            Call us on phone
+            <ion-icon name="chevron-forward-outline" class="text-secondary"></ion-icon>
+        </a>
+        <a href="" class="list-group-item d-flex justify-content-between align-items-center">
+            Send us a mail
+            <ion-icon name="chevron-forward-outline" class="text-secondary"></ion-icon>
+        </a>
+        <a href="" class="list-group-item d-flex justify-content-between align-items-center">
+            In-app chat
+            <ion-icon name="chevron-forward-outline" class="text-secondary"></ion-icon>
+        </a>
+        <a href="" class="list-group-item d-flex justify-content-between align-items-center">
+            Follow us on Twitter
+            <ion-icon name="chevron-forward-outline" class="text-secondary"></ion-icon>
+        </a>
+    </div>
+
+    <div class="px-3 py-2 mt-1 text-muted">Legal</div>
+    <div class="list-group px-3">
+        <a href="" class="list-group-item d-flex justify-content-between align-items-center">
+            Terms and conditions
+            <ion-icon name="chevron-forward-outline" class="text-secondary"></ion-icon>
+        </a>
+        <a href="" class="list-group-item d-flex justify-content-between align-items-center">
+            Privacy policy
+            <ion-icon name="chevron-forward-outline" class="text-secondary"></ion-icon>
+        </a>
+        <a href="" class="list-group-item d-flex justify-content-between align-items-center">
+            About us
+            <ion-icon name="chevron-forward-outline" class="text-secondary"></ion-icon>
+        </a>
+    </div>
+
+    <div class="mt-3 d-flex justify-content-center">
+        <small class="text-muted">v0.1.23</small>
+    </div>
+
+</div>
+
+<!-- * App Content -->
 
 {% endblock %}
