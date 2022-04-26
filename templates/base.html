@@ -8,11 +8,14 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="theme-color" content="#000000">
-    <title>{% block title %}{% endblock %} | Finapp</title>
-    <meta name="description" content="FinPy HTML Mobile Template">
-    <meta name="keywords" content="bootstrap, wallet, banking, fintech mobile template, cordova, phonegap, mobile, html, responsive" />
-    <link rel="icon" type="image/png" href="{% static 'images/favicon.png' %}" sizes="32x32">
-    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/icon/192x192.png' %}">
+    <title>{% block title %}{% endblock %} | Pue</title>
+    <meta name="description" content="Pue HTML Mobile Template">
+    <meta name="keywords" content="bootstrap, wallet, banking, Pue mobile template, mobile, html, responsive" />
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/icon/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/icon/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/icon/favicon-16x16.png' %}">
+    <!-- ========= CSS Files ========= -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css">
     <link rel="stylesheet" href="{% static 'styles/custom.css' %}">
@@ -23,24 +26,55 @@
 
     <!-- loader -->
     <div id="loader">
-        <img src="{% static 'images/loading-icon.png' %}" alt="icon" class="loading-icon">
+        <img src="{% static 'images/loading.png' %}" alt="icon" class="loading-icon">
     </div>
     <!-- * loader -->
     
-    {% block content %}
-    {% endblock content %}
+    {% block content %}{% endblock content %}
 
-
-    {% include "partials/app_bottom_menu.html" %}
+    <!-- App Bottom Menu -->
+    <div class="position-fixed w-100 bottom-0 start-0 end-0 bg-white d-flex align-items-center justify-content-center border-top px-1">
+        <a href="{% url 'home' %}" class="py-1 {% url 'home' as home_url %}{% if request.get_full_path == home_url %}text-primary{% else %}text-black{% endif %} text-center w-100 d-flex align-items-center justify-content-center position-relative text-decoration-none lh-sm">
+            <div class="w-100 text-center px-1">
+                <ion-icon name="home-outline" class="d-block lh-base mx-auto fs-2 py-1"></ion-icon>
+                <strong class="d-block fs-9">Home</strong>
+            </div>
+        </a>
+        <a href="{% url 'payments' %}" class="py-1 {% url 'payments' as payments_url %}{% if request.get_full_path == payments_url %}text-primary{% else %}text-black{% endif %} text-center w-100 d-flex align-items-center justify-content-center position-relative text-decoration-none lh-sm">
+            <div class="w-100 text-center px-1">
+                <ion-icon name="paper-plane-outline" class="d-block lh-base mx-auto fs-2 py-1"></ion-icon>
+                <strong class="d-block fs-9">Payments</strong>
+            </div>
+        </a>
+        <a href="{% url 'analytics' %}" class="py-1 {% url 'analytics' as analytics_url %}{% if request.get_full_path == analytics_url %}text-primary{% else %}text-black{% endif %} text-center w-100 d-flex align-items-center justify-content-center position-relative text-decoration-none lh-sm">
+            <div class="w-100 text-center px-1">
+                <ion-icon name="bar-chart-outline" class="d-block lh-base mx-auto fs-2 py-1"></ion-icon>
+                <strong class="d-block fs-9">Analytics</strong>
+            </div>
+        </a>
+        <a href="{% url 'goals' %}" class="py-1 {% url 'goals' as goals_url %}{% if request.get_full_path == goals_url %}text-primary{% else %}text-black{% endif %} text-center w-100 d-flex align-items-center justify-content-center position-relative text-decoration-none lh-sm">
+            <div class="w-100 text-center px-1">
+                <ion-icon name="football-outline" class="d-block lh-base mx-auto fs-2 py-1"></ion-icon>
+                <strong class="d-block fs-9">Goals</strong>
+            </div>
+        </a>
+        <a href="{% url 'more' %}" class="py-1 {% url 'more' as more_url %}{% if request.get_full_path == more_url %}text-primary{% else %}text-black{% endif %} text-center w-100 d-flex align-items-center justify-content-center position-relative text-decoration-none lh-sm">
+            <div class="w-100 text-center px-1">
+                <ion-icon name="apps-outline" class="d-block lh-base mx-auto fs-2 py-1"></ion-icon>
+                <strong class="d-block fs-9">More</strong>
+            </div>
+        </a>
+    </div>
+    <!-- * App Bottom Menu -->
 
     <!-- ========= JS Files =========  -->
+    <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- Bootstrap -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
     <!-- Ionicons -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <!-- Splide -->
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.20/dist/js/splide.min.js"></script>
+    <!-- Custom -->
     <script src="{% static 'scripts/app.js' %}"></script>
     
 </body>
