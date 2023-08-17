@@ -1,0 +1,10 @@
+- Register
+- Log in
+- Forgot Password
+- OTP
+- Transaction confirmation
+- Notifications
+- Profile settings
+- Analytics
+- Payments
+- Goals

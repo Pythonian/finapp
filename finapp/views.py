@@ -21,6 +21,10 @@ def more(request):
     return render(request, 'more.html')
 
 
+def welcome(request):
+    return render(request, 'welcome.html')
+
+
 def transactions(request):
     return render(request, 'transactions.html')
 

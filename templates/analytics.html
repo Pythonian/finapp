@@ -4,5 +4,51 @@
 
 {% block content %}
 
+<!-- App Header -->
+<div
+    class="d-flex justify-content-center align-items-center position-fixed start-0 end-0 border-0 bg-light text-primary border-bottom py-2 z-index-999">
+    <div class="d-flex top-0 position-absolute align-items-center start-0 ms-2">
+        <a href="javascript:history.go(-1)"
+            class="text-primary d-flex align-items-center justify-content-center position-relative p-2 my-2">
+            <ion-icon class="fs-1" name="chevron-back-outline"></ion-icon>
+        </a>
+    </div>
+    <div class="fs-5 py-1 px-2 text-black">Analytics</div>
+    <div class="top-0 d-flex align-items-center position-absolute end-0 me-2">
+        <a data-bs-toggle="modal" data-bs-target="#StatementAction" role="button"
+            class="text-primary d-flex align-items-center justify-content-center position-relative p-2 my-2">
+            <ion-icon name="document-text-outline" class="fs-1"></ion-icon>
+        </a>
+    </div>
+</div>
+<!-- * App Header -->
+
+<!-- Bank Statement Modal -->
+<div class="modal fade" id="StatementAction" tabindex="-1" role="dialog">
+    <div class="modal-dialog position-fixed end-0 start-0 bottom-0 p-0 m-0 w-100" role="document">
+        <div class="modal-content rounded-0">
+            <div class="modal-header">
+                <h5 class="modal-title">Bank Statement</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-2">
+                        <label class="small mb-1" for="">Start Date</label>
+                        <input type="date" name="start_date" id="start_date" class="form-control"
+                            placeholder="Start date">
+                    </div>
+                    <div class="mb-3">
+                        <label class="small mb-1" for="">End Date</label>
+                        <input type="date" name="end_date" id="end_date" class="form-control" placeholder="End date">
+                    </div>
+
+                    <button type="button" class="btn btn-primary w-100">Generate statement</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- * Bank Statement Modal -->
 
 {% endblock %}

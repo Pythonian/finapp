@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Welcome{% endblock %}
+
+{% block content %}
+
+<!-- App Header -->
+<div
+    class="d-flex justify-content-center align-items-center position-fixed start-0 end-0 border-0 bg-primary text-primary py-3 z-index-999">
+    <img src="{% static 'images/logo.png' %}" alt="logo" class="logo">
+</div>
+<!-- * App Header -->
+
+<!-- App Content -->
+<div class="py-5 mb-3">
+
+    <div class="p-5">
+        <div class="my-5 text-center">
+            <div class="mb-5">
+                <img src="{% static 'images/f_avatar.svg' %}" alt="image" class="w-50">
+            </div>
+            <h2 class="mb-2">Welcome back again!</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquam.
+            </p>
+        </div>
+
+        <div class="position-fixed bottom-0 end-0 start-0 p-4 1px-2 d-flex align-items-center justify-content-between gap-3">
+            <a href="" class="btn btn-lg btn-primary w-100">Sign in</a>
+            <a href="" class="btn btn-lg btn-outline-secondary w-100">Register</a>
+        </div>
+
+    </div>
+
+</div>
+<!-- * App Content -->
+
+{% endblock content %}
+
+{% block menu %}{% endblock menu %}
